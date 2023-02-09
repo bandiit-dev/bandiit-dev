@@ -1,0 +1,22 @@
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  align-items: center;
+}
+footer p {
+  color: #fff;
+}
+footer svg {
+  margin-left: 20px;
+  font-size: 20px;
+}
+footer svg path {
+  transition: all ease 0.2s;
+  fill: #fff;
+}
+footer svg:hover path {
+  fill: #ff9529;
+}

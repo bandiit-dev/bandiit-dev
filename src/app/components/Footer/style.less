@@ -1,0 +1,26 @@
+@import url("../../../assets/colors.less");
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  align-items: center;
+  p {
+    color: @white;
+  }
+  svg {
+    margin-left: 20px;
+    font-size: 20px;
+    path {
+      transition: all ease 0.2s;
+      fill: @white;
+    }
+    &:hover {
+      path {
+        fill: @orange;
+      }
+    }
+  }
+}
