@@ -1,0 +1,46 @@
+.homesecs {
+  scroll-snap-type: y mandatory;
+  .content {
+    scroll-snap-align: start;
+  }
+}
+
+.tk-blob {
+  fill: var(--whiteColor);
+  width: 35vw;
+  position: fixed;
+  right: -20vh;
+  bottom: -30vh;
+  animation: blob-turn var(--time, 30s) linear infinite;
+  --time: 20s;
+  --amount: 8;
+  svg {
+    animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
+    transform-origin: center;
+  }
+}
+
+h1 {
+  color: var(--whiteColor);
+  font-size: 8rem;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: var(--whiteColor);
+}
+
+.textcontent {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-gap: 50px;
+  margin-top: 80px;
+  p {
+    color: var(--whiteColor);
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}

@@ -16,7 +16,17 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/ibmplexmono/v15/-F6qfjptAgt5VM-kVkqdyU8n3pQP8lc.ttf) format('truetype');
 }
+:root {
+  --whiteColor: #fff;
+  --pinkColor: #ff5183;
+}
 body {
   background: #242424;
   font-family: "IBM Plex Mono", monospace;
+  overflow-x: hidden;
+}
+.content {
+  padding: 5vw;
+  height: 100vh;
+  margin: 0px auto;
 }

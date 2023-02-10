@@ -7,7 +7,7 @@ footer {
   align-items: center;
 }
 footer p {
-  color: #fff;
+  color: var(--whiteColor);
 }
 footer svg {
   margin-left: 20px;
@@ -15,8 +15,8 @@ footer svg {
 }
 footer svg path {
   transition: all ease 0.2s;
-  fill: #fff;
+  fill: var(--whiteColor);
 }
 footer svg:hover path {
-  fill: #ff9529;
+  fill: var(--pinkColor);
 }
