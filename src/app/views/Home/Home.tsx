@@ -6,9 +6,9 @@ const Home = () => {
     <>
       <section className="homesecs">
         <div className="content">
-          <h2>Hello world, I am...</h2>
-          <h1>Igor Miguel</h1>
-          <div className="textcontent">
+          <h2>Hello world, we are...</h2>
+          <h1>Bandiit.dev</h1>
+          {/* <div className="textcontent">
             <span></span>
             <p>
               Hello, I'm a Front End Developer, with more than 7 years of career
@@ -20,10 +20,7 @@ const Home = () => {
               work. I'm always looking for ways to improve my skills and the
               projects I work on.
             </p>
-          </div>
-        </div>
-        <div className="content">
-          <p>test</p>
+          </div> */}
         </div>
       </section>
       <div className="tk-blob">
