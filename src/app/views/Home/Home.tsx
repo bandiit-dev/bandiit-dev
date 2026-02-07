@@ -8,19 +8,23 @@ const Home = () => {
         <div className="content">
           <h2>Hello world, we are...</h2>
           <h1>Bandiit.dev</h1>
-          {/* <div className="textcontent">
+          <div className="textcontent">
             <span></span>
             <p>
-              Hello, I'm a Front End Developer, with more than 7 years of career
-              and with extensive experience in JavaScript, React and TypeScript.
-              I have experience in technology and marketing companies.
+              Hello, we’re <strong>Bandiit.dev</strong> — a 3-year-old product
+              and engineering studio specializing in modern front-end
+              development with JavaScript, React, and TypeScript. We help
+              technology and marketing teams ship fast, scalable,
+              high-performing web experiences that convert.
             </p>
             <p>
-              I am organized, agile and dedicated to delivering high quality
-              work. I'm always looking for ways to improve my skills and the
-              projects I work on.
+              We’re known for clear communication, strong ownership, and
+              reliable delivery. From planning to release, we focus on building
+              polished interfaces, maintaining clean codebases, and continuously
+              improving performance and UX so your project moves forward with
+              confidence.
             </p>
-          </div> */}
+          </div>
         </div>
       </section>
       <div className="tk-blob">
