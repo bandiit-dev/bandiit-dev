@@ -1,32 +1,62 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: "IBM Plex Mono";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ibmplexmono/v15/-F6qfjptAgt5VM-kVkqdyU8n3oQI8lc.ttf) format('truetype');
+  src: url("https://fonts.gstatic.com/s/ibmplexmono/v15/-F6qfjptAgt5VM-kVkqdyU8n3oQI8lc.ttf")
+    format("truetype");
 }
+
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: "IBM Plex Mono";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ibmplexmono/v15/-F6qfjptAgt5VM-kVkqdyU8n3pQP8lc.ttf) format('truetype');
+  src: url("https://fonts.gstatic.com/s/ibmplexmono/v15/-F6qfjptAgt5VM-kVkqdyU8n3pQP8lc.ttf")
+    format("truetype");
 }
+
 :root {
-  --whiteColor: #fff;
-  --pinkColor: #ff5183;
+  --bg-primary: #05040a;
+  --bg-secondary: #0e0d16;
+  --text-primary: #ffffff;
+  --text-secondary: #cfd2d8;
+  --text-muted: #9ea3b3;
+  --accent-color: #4507f1;
+  --border-color: rgba(255, 255, 255, 0.08);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #242424;
   font-family: "IBM Plex Mono", monospace;
-  overflow-x: hidden;
+  background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
-.content {
-  padding: 5vw;
-  height: 100vh;
-  margin: 0px auto;
+
+a {
+  color: inherit;
+}
+
+p {
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#root {
+  min-height: 100vh;
 }

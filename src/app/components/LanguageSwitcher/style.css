@@ -1,0 +1,39 @@
+.language-switcher {
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.language-switcher__label {
+  opacity: 0.7;
+  font-size: 0.7rem;
+}
+
+.language-switcher__options {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.language-switcher__button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.language-switcher__button:hover,
+.language-switcher__button.is-active {
+  opacity: 1;
+}
+
+.language-switcher__divider {
+  opacity: 0.4;
+}
