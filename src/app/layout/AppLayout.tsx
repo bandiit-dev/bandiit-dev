@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 
 import { Footer } from "../components/Footer";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
+import { AnalyticsTracker } from "../analytics";
 import { COMPANY_INFO } from "../constants/company";
 import { useTranslation } from "../i18n";
 
@@ -18,6 +19,7 @@ const AppLayout = () => {
 
   return (
     <div className="app-layout">
+      <AnalyticsTracker />
       <header className="app-header">
         <Link to="/" className="app-header__brand">
           {COMPANY_INFO.brand}
