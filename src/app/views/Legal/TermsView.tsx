@@ -1,17 +1,34 @@
 import { Helmet } from "react-helmet-async";
 
-import { useTranslation } from "../../i18n";
+import { COMPANY_INFO } from "../../constants/company";
+import { useLanguage, useTranslation } from "../../i18n";
 
 import "./legal.css";
 
+const BASE_URL = "https://bandiit.dev.br";
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
+
 const TermsView = () => {
   const t = useTranslation();
+  const { language } = useLanguage();
+  const canonicalUrl = `${BASE_URL}/terms`;
+  const title = t("termsSeoTitle");
+  const description = t("termsSeoDescription");
 
   return (
     <article className="legal-page">
       <Helmet>
-        <title>{t("termsSeoTitle")}</title>
-        <meta name="description" content={t("termsSeoDescription")} />
+        <title>{title}</title>
+        <html lang={language} />
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content={language} />
+        <meta property="og:site_name" content={COMPANY_INFO.brand} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={DEFAULT_OG_IMAGE} />
       </Helmet>
       <h1>{t("termsTitle")}</h1>
       <p>{t("termsIntro")}</p>

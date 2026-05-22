@@ -29,14 +29,14 @@ const LanguageContext = createContext<LanguageContextValue | undefined>(
 
 const getStoredLanguage = (): Language => {
   if (typeof window === "undefined") {
-    return "en-US";
+    return "pt-BR";
   }
 
   const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY) as
     | Language
     | null;
 
-  return saved && saved in translations ? saved : "en-US";
+  return saved && saved in translations ? saved : "pt-BR";
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
@@ -45,6 +45,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+      document.documentElement.lang = language;
     }
   }, [language]);
 

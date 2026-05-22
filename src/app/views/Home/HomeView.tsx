@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
@@ -6,6 +6,9 @@ import { COMPANY_INFO } from "../../constants/company";
 import { useLanguage, useTranslation } from "../../i18n";
 
 import "./style.css";
+
+const BASE_URL = "https://bandiit.dev.br";
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 const AliasAnchors = ({ ids }: { ids: string[] }) => (
   <>
@@ -45,52 +48,102 @@ const HomeView = () => {
   }, [location]);
 
   const services = t("homeServicesItems");
-  const howBullets = t("homeHowBullets");
+  const whoForBullets = t("homeHowBullets");
   const heroPrimaryHref = t("homeHeroPrimaryHref");
   const heroSecondaryHref = t("homeHeroSecondaryHref");
-  const contactEmail =
-    language === "pt-BR" ? COMPANY_INFO.emailPt : COMPANY_INFO.emailEn;
 
-  const plainPhone = COMPANY_INFO.phone.replace(/[^\d]/g, "");
-  const whatsappHref = plainPhone ? `https://wa.me/${plainPhone}` : undefined;
-
-  const contactItems = [
-    {
-      label: t("homeContactEmailLabel"),
-      value: contactEmail,
-      href: `mailto:${contactEmail}`,
-    },
-    {
-      label: t("homeContactPhoneLabel"),
-      value: COMPANY_INFO.phone,
-      href: `tel:${COMPANY_INFO.phone}`,
-    },
-    {
-      label: t("homeContactAddressLabel"),
-      value: COMPANY_INFO.address,
-    },
-    {
-      label: t("homeContactHoursLabel"),
-      value: t("homeContactHoursValue"),
-    },
-  ];
+  const canonicalUrl = `${BASE_URL}/`;
+  const jsonLd = useMemo(
+    () => ({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": `${BASE_URL}/#organization`,
+          name: COMPANY_INFO.brand,
+          url: BASE_URL,
+          email: COMPANY_INFO.emailPt,
+          telephone: COMPANY_INFO.phone,
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": `${BASE_URL}/#professional-service`,
+          name: COMPANY_INFO.brand,
+          url: BASE_URL,
+          email: COMPANY_INFO.emailPt,
+          telephone: COMPANY_INFO.phone,
+          areaServed: "BR",
+          serviceType: [
+            "Criação de sites profissionais",
+            "Desenvolvimento de sistemas sob medida",
+            "Desenvolvimento web",
+            "Integração de sistemas e APIs",
+            "Automação de processos empresariais",
+            "Manutenção e suporte técnico",
+          ],
+          provider: { "@id": `${BASE_URL}/#organization` },
+        },
+        {
+          "@type": "WebSite",
+          "@id": `${BASE_URL}/#website`,
+          url: BASE_URL,
+          name: COMPANY_INFO.brand,
+          inLanguage: ["pt-BR", "en-US"],
+          publisher: { "@id": `${BASE_URL}/#organization` },
+        },
+        {
+          "@type": "Service",
+          "@id": `${BASE_URL}/#service`,
+          name: "Criação de sites e sistemas para pequenas e médias empresas",
+          provider: { "@id": `${BASE_URL}/#organization` },
+          areaServed: "BR",
+          serviceType: [
+            "Criação de sites profissionais",
+            "Desenvolvimento de sistemas sob medida",
+            "Desenvolvimento web",
+            "Integração de sistemas e APIs",
+            "Automação de processos empresariais",
+            "Manutenção e suporte técnico",
+          ],
+        },
+      ],
+    }),
+    []
+  );
 
   return (
     <div className="home-view">
       <Helmet>
         <title>{t("homeSeoTitle")}</title>
+        <html lang={language} />
         <meta name="description" content={t("homeSeoDescription")} />
+        <link rel="canonical" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="pt-BR" href={`${BASE_URL}/`} />
+        <link rel="alternate" hrefLang="en-US" href={`${BASE_URL}/?lang=en-US`} />
+        <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={language} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content={COMPANY_INFO.brand} />
+        <meta property="og:title" content={t("homeOgTitle")} />
+        <meta property="og:description" content={t("homeOgDescription")} />
+        <meta property="og:image" content={DEFAULT_OG_IMAGE} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t("homeOgTitle")} />
+        <meta name="twitter:description" content={t("homeOgDescription")} />
+        <meta name="twitter:image" content={DEFAULT_OG_IMAGE} />
+        <meta name="robots" content="index,follow" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <section className="home-hero" aria-labelledby="home-hero-title">
         <div className="home-hero__content">
           <h1 id="home-hero-title">{t("homeHeroSubtitle")}</h1>
           <p className="home-hero__description">{t("homeHeroDescription")}</p>
           <div className="home-hero__actions">
-            <a
-              className="btn btn-secondary"
-              href={whatsappHref}
-              target="_blank"
-            >
+            <a className="btn btn-primary" href={heroPrimaryHref}>
+              {t("homeHeroPrimaryCta")}
+            </a>
+            <a className="btn btn-secondary" href={heroSecondaryHref} target="_blank" rel="noreferrer">
               {t("homeHeroSecondaryCta")}
             </a>
           </div>
@@ -125,11 +178,13 @@ const HomeView = () => {
           <div className="home-section__header">
             <p className="eyebrow">{t("navServices")}</p>
             <h2 id="home-services-title">{t("homeServicesTitle")}</h2>
+            <p className="home-section__lead">{t("homeServicesIntro")}</p>
           </div>
           <ul className="home-card-list">
             {services.map((item) => (
-              <li key={item} className="home-card">
-                <span>{item}</span>
+              <li key={item.title} className="home-card">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </li>
             ))}
           </ul>
@@ -149,44 +204,30 @@ const HomeView = () => {
             <p className="home-section__lead">{t("homeHowText")}</p>
           </div>
           <ul className="home-list">
-            {howBullets.map((item) => (
+            {whoForBullets.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </div>
       </section>
 
-      {/* <section
+      <section
         id="contato"
         className="home-section"
         aria-labelledby="home-contact-title"
       >
-        <AliasAnchors ids={["contact"]} />
-        <div className="home-section__header">
-          <p className="eyebrow">{t("navContact")}</p>
-          <h2 id="home-contact-title">{t("homeContactTitle")}</h2>
-          <p className="home-section__lead">{t("homeContactIntro")}</p>
-        </div>
-        <div className="home-contact">
-          <dl>
-            {contactItems.map((item) => (
-              <div key={item.label} className="home-contact__item">
-                <dt>{item.label}</dt>
-                <dd>
-                  {item.href ? (
-                    <a href={item.href}>{item.value}</a>
-                  ) : (
-                    <span>{item.value}</span>
-                  )}
-                </dd>
-              </div>
-            ))}
-          </dl>
-          <a className="btn btn-primary" href={`mailto:${contactEmail}`}>
+        <div className="home-section__content">
+          <AliasAnchors ids={["contact"]} />
+          <div className="home-section__header">
+            <p className="eyebrow">{t("navContact")}</p>
+            <h2 id="home-contact-title">{t("homeContactTitle")}</h2>
+            <p className="home-section__lead">{t("homeContactIntro")}</p>
+          </div>
+          <a className="btn btn-primary" href={heroPrimaryHref}>
             {t("homeContactCta")}
           </a>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };

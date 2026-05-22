@@ -13,89 +13,111 @@ const translationContent = {
     navSupport: "Support",
     homeHeroTitle: "Bandiit.dev",
     homeHeroSubtitle:
-      "Custom digital solutions: web and mobile development, integrations, and automation for businesses.",
+      "Website and business system development for small and medium-sized companies",
     homeHeroDescription:
-      "We design, build, and evolve software with senior engineers focused on performance, clear communication, and measurable results.",
-    homeHeroPrimaryCta: "Contact us",
-    homeHeroPrimaryHref: "#contact",
-    homeHeroSecondaryCta: "Request a quote",
-    homeHeroSecondaryHref: "#contact",
+      "We build professional websites, custom web systems, integrations, and automations for companies that want to improve digital presence, reduce manual processes, and grow efficiently.",
+    homeHeroPrimaryCta: "Request a quote",
+    homeHeroPrimaryHref: "mailto:contato@bandiit.dev.br",
+    homeHeroSecondaryCta: "Talk to a specialist",
+    homeHeroSecondaryHref: "https://wa.me/5521971340128",
     homeServicesTitle: "What we do",
+    homeServicesIntro:
+      "We build digital solutions for companies that need to move away from improvisation, organize operations, and sell better online.",
     homeServicesItems: [
-      "Websites, landing pages, and web applications",
-      "Mobile apps (iOS and Android)",
-      "Third-party API and system integrations",
-      "Automation and performance optimization",
-      "Ongoing maintenance and technical support",
+      {
+        title: "Professional websites",
+        description:
+          "Fast, responsive websites designed to present your company, build trust, and convert visitors into leads.",
+      },
+      {
+        title: "Custom business systems",
+        description:
+          "Web systems created for your specific operation so your team can stop relying on disconnected spreadsheets and tools.",
+      },
+      {
+        title: "Integrations and automations",
+        description:
+          "We connect APIs, CRMs, ERPs, and internal workflows to reduce manual work and avoid rework.",
+      },
+      {
+        title: "Maintenance and evolution",
+        description:
+          "We help maintain, fix, and improve existing websites and systems with more security, performance, and predictability.",
+      },
     ],
-    homeHowTitle: "How we work",
+    homeHowTitle: "Who this is for",
     homeHowText:
-      "From planning to delivery, with clarity and quality. We support your company from discovery to production, offering objective communication, documentation, and focus on outcomes.",
+      "We work with small and medium-sized companies that need practical technology, built with quality, and aligned to business goals.",
     homeHowBullets: [
-      "Defined scope and timeline",
-      "Engineering and security best practices",
-      "Incremental deliveries",
-      "Post-launch support",
+      "Service companies",
+      "Local businesses",
+      "Early-stage startups",
+      "Commercial operations",
+      "Teams that still depend heavily on spreadsheets and manual processes",
     ],
     homeAboutTitle: "About Bandiit.dev",
     homeAboutTextOne:
-      "We’re Bandiit.dev — a 3-year-old product and engineering studio specializing in modern front-end development with JavaScript, React, and TypeScript. We help technology and marketing teams ship fast, scalable, high-performing web experiences that convert.",
+      "Bandiit.dev supports SMB owners with website development, custom systems, integrations, and process automation.",
     homeAboutTextTwo:
-      "We build and evolve digital products end-to-end, including web and mobile development, third-party integrations, and automation. Our focus is delivering high-quality software with strong performance, security best practices, and a great user experience — always with clear communication and transparency throughout the process.",
-    homeContactTitle: "Contact",
+      "Our goal is to deliver technology that helps companies sell better, operate efficiently, and grow with confidence.",
+    homeContactTitle: "Need to create or improve your company's website?",
     homeContactIntro:
-      "Let’s talk about your project or partnership. We respond quickly.",
+      "Tell us about your project and we will recommend the best path: institutional website, custom system, integration, or automation.",
     homeContactEmailLabel: "Email",
     homeContactPhoneLabel: "Phone/WhatsApp",
-    homeContactAddressLabel: "Address",
+    homeContactAddressLabel: "Service area",
     homeContactHoursLabel: "Hours",
-    homeContactHoursValue: "Mon–Fri, 9am–6pm (BRT)",
-    homeContactCta: "Send a message",
-    homeSeoTitle: "Bandiit.dev — Custom software studio",
+    homeContactHoursValue: "Mon-Fri, 9am-6pm (BRT)",
+    homeContactCta: "Request a quote",
+    homeSeoTitle:
+      "Website and Business System Development for Companies | Bandiit.dev",
     homeSeoDescription:
-      "Custom digital solutions: web and mobile development, integrations, automation, and ongoing support for companies across Brazil.",
-    privacySeoTitle: "Bandiit.dev — Privacy Policy",
+      "We build professional websites, custom systems, integrations, and automations for small and medium-sized companies in Brazil.",
+    homeOgTitle: "Website and business systems for companies | Bandiit.dev",
+    homeOgDescription:
+      "Websites, web systems, integrations, and automations for small and medium-sized businesses that want to grow with technology.",
+    privacySeoTitle: "Privacy Policy | Bandiit.dev",
     privacySeoDescription:
-      "Understand how Bandiit.dev collects, uses, and protects contact information and project data.",
-    termsSeoTitle: "Bandiit.dev — Terms of Use",
+      "Understand how Bandiit.dev collects, uses, and protects contact and project data.",
+    termsSeoTitle: "Terms of Use | Bandiit.dev",
     termsSeoDescription:
       "Review the terms for using the Bandiit.dev website and materials.",
-    supportSeoTitle: "Bandiit.dev — Support",
+    supportSeoTitle: "Support | Bandiit.dev",
     supportSeoDescription:
-      "Get support from the Bandiit.dev team via email or WhatsApp.",
+      "Get support from Bandiit.dev via email or WhatsApp.",
     privacyTitle: "Privacy Policy",
     privacyIntro:
-      "Bandiit.dev respects your privacy. We only collect the data needed to reply to inquiries and provide our services, such as your name, email, and message submitted through the site.",
+      "Bandiit.dev respects your privacy. We collect only the data needed to respond to requests and provide services.",
     privacyUseTitle: "How we use your data",
     privacyUseItems: [
       "Respond to inquiries and proposals",
-      "Communicate about project or support progress",
+      "Communicate project and support updates",
       "Comply with legal obligations when applicable",
     ],
     privacyShareTitle: "Sharing",
     privacyShareText:
-      "We do not sell your data. We only share information with essential providers (hosting, email, etc.) when it is necessary to deliver the service.",
+      "We do not sell your data. Information is shared only with essential providers when required to deliver the service.",
     privacyRightsTitle: "Your rights",
     privacyRightsText:
-      "You may request access, correction, or deletion of personal data at any time by emailing contato@bandiit.dev.br.",
+      "You can request access, correction, or deletion of personal data at any time via contato@bandiit.dev.br.",
     privacyContactTitle: "Contact",
     privacyContactText: "Privacy questions: contato@bandiit.dev.br.",
     termsTitle: "Terms of Use",
     termsIntro:
       "By accessing this site, you agree to use it lawfully and responsibly.",
     termsOwnershipText:
-      "The site content (texts, brand, and materials) belongs to Bandiit.dev unless otherwise indicated. Reproduction without authorization is prohibited.",
+      "Site content (text, brand, and materials) belongs to Bandiit.dev unless stated otherwise.",
     termsLinksText:
-      "This site may contain links to third-party websites; we are not responsible for their content or policies.",
+      "This site may include third-party links; we are not responsible for their content or policies.",
     termsUpdateText:
-      "We may update these terms at any time. Last update: 02/19/2026.",
+      "These terms may be updated at any time. Last update: 2026-05-22.",
     supportTitle: "Support",
     supportIntro: "For support, questions, or requests, contact us:",
     supportEmailLabel: "Email",
     supportNote: "We aim to respond within one business day.",
-    footerAddressLabel: "Address",
+    footerAddressLabel: "Service area",
     footerContactLabel: "Contact",
-    footerPrivacyLabel: "Privacy inquiries",
+    footerPrivacyLabel: "Privacy",
     footerLinksLabel: "Quick links",
   },
   "pt-BR": {
@@ -104,76 +126,96 @@ const translationContent = {
     languagePortuguese: "Português (Brasil)",
     navHome: "Início",
     navServices: "Serviços",
-    navHow: "Como trabalhamos",
+    navHow: "Para quem é",
     navAbout: "Sobre",
     navContact: "Contato",
     navPrivacy: "Privacidade",
     navTerms: "Termos",
     navSupport: "Suporte",
     homeHeroTitle: "Bandiit.dev",
-    homeHeroSubtitle:
-      "Soluções digitais sob medida: desenvolvimento web e mobile, integrações e automações para empresas.",
+    homeHeroSubtitle: "Criação de sites para pequenas e médias empresas",
     homeHeroDescription:
-      "Entregamos software com engenharia sênior, comunicação clara e foco em performance, documentação e resultados reais.",
-    homeHeroPrimaryCta: "Fale com a gente",
-    homeHeroPrimaryHref: "#contato",
-    homeHeroSecondaryCta: "Solicitar proposta",
-    homeHeroSecondaryHref: "#contato",
-    homeServicesTitle: "Serviços",
+      "Desenvolvemos sites profissionais, sistemas web, integrações e automações para empresas que querem melhorar sua presença digital, reduzir processos manuais e crescer com mais eficiência.",
+    homeHeroPrimaryCta: "Solicitar orçamento",
+    homeHeroPrimaryHref: "mailto:contato@bandiit.dev.br",
+    homeHeroSecondaryCta: "Falar com especialista",
+    homeHeroSecondaryHref: "https://wa.me/5521971340128",
+    homeServicesTitle: "O que fazemos",
+    homeServicesIntro:
+      "Criamos soluções digitais para empresas que precisam sair do improviso, organizar processos e vender melhor online.",
     homeServicesItems: [
-      "Desenvolvimento de sites, landing pages e aplicações web",
-      "Apps mobile (iOS e Android)",
-      "Integrações com APIs e sistemas de terceiros",
-      "Automação de processos e otimização de performance",
-      "Manutenção evolutiva e suporte técnico",
+      {
+        title: "Sites profissionais",
+        description:
+          "Sites rápidos, responsivos e preparados para apresentar sua empresa, gerar confiança e converter visitantes em contatos.",
+      },
+      {
+        title: "Sistemas sob medida",
+        description:
+          "Sistemas web criados para resolver processos específicos da sua operação, sem depender de planilhas ou ferramentas desconectadas.",
+      },
+      {
+        title: "Integrações e automações",
+        description:
+          "Conectamos ferramentas, APIs, CRMs, ERPs e fluxos internos para reduzir trabalho manual e evitar retrabalho.",
+      },
+      {
+        title: "Manutenção e evolução",
+        description:
+          "Ajudamos a manter, corrigir e evoluir sites e sistemas existentes com mais segurança, performance e previsibilidade.",
+      },
     ],
-    homeHowTitle: "Como trabalhamos",
+    homeHowTitle: "Para quem é",
     homeHowText:
-      "Do planejamento à entrega, com clareza e qualidade. Apoiamos sua empresa desde a descoberta do problema até a produção, com comunicação objetiva, documentação e foco em resultado.",
+      "Trabalhamos com pequenas e médias empresas que precisam de tecnologia prática, bem construída e alinhada ao negócio.",
     homeHowBullets: [
-      "Escopo e cronograma definidos",
-      "Boas práticas de engenharia e segurança",
-      "Entregas incrementais",
-      "Suporte pós-lançamento",
+      "empresas de serviços",
+      "negócios locais",
+      "startups em fase inicial",
+      "operações comerciais",
+      "equipes que ainda dependem muito de planilhas e processos manuais",
     ],
     homeAboutTitle: "Sobre a Bandiit.dev",
     homeAboutTextOne:
-      "Somos a Bandiit.dev — um estúdio web com 3 anos de atuação, especializado em desenvolvimento de aplicações front-end com JavaScript, React e TypeScript. Ajudamos times de tecnologia e marketing a entregar experiências web rápidas, escaláveis e de alta performance, focadas em conversão.",
+      "A Bandiit.dev é uma empresa brasileira focada em criação e desenvolvimento de sites, sistemas para empresas, integração de sistemas e automação de processos.",
     homeAboutTextTwo:
-      "Criamos e evoluímos produtos digitais de ponta a ponta, incluindo desenvolvimento web e mobile, integrações com serviços de terceiros e automações. Nosso foco é entregar software de alta qualidade, com atenção a performance, boas práticas de segurança e uma ótima experiência do usuário — sempre com comunicação clara e transparência no processo.",
-    homeContactTitle: "Contato",
+      "Atendemos negócios que querem vender melhor, operar com eficiência e crescer com tecnologia através de soluções sob medida e suporte contínuo.",
+    homeContactTitle: "Precisa criar ou melhorar o site da sua empresa?",
     homeContactIntro:
-      "Quer conversar sobre um projeto ou parceria? Respondo rápido.",
+      "Conte um pouco sobre o seu projeto e vamos indicar o melhor caminho: site institucional, sistema sob medida, integração ou automação.",
     homeContactEmailLabel: "E-mail",
     homeContactPhoneLabel: "WhatsApp/Telefone",
-    homeContactAddressLabel: "Endereço",
+    homeContactAddressLabel: "Atendimento",
     homeContactHoursLabel: "Horário",
-    homeContactHoursValue: "Seg–Sex, 9h–18h (BRT)",
-    homeContactCta: "Enviar mensagem",
-    homeSeoTitle: "Bandiit.dev — Software sob medida",
+    homeContactHoursValue: "Seg-Sex, 9h-18h (BRT)",
+    homeContactCta: "Solicitar orçamento",
+    homeSeoTitle: "Criação de Sites para Empresas | Bandiit.dev",
     homeSeoDescription:
-      "Desenvolvimento web e mobile, integrações, automações e suporte contínuo para empresas em todo o Brasil.",
-    privacySeoTitle: "Bandiit.dev — Política de Privacidade",
+      "Criamos sites profissionais, sistemas sob medida, integrações e automações para pequenas e médias empresas no Brasil. Fale com a Bandiit.dev.",
+    homeOgTitle: "Criação de Sites para Empresas | Bandiit.dev",
+    homeOgDescription:
+      "Sites, sistemas web, integrações e automações para pequenas e médias empresas que querem crescer com tecnologia.",
+    privacySeoTitle: "Política de Privacidade | Bandiit.dev",
     privacySeoDescription:
       "Saiba como a Bandiit.dev coleta, usa e protege seus dados de contato e informações de projetos.",
-    termsSeoTitle: "Bandiit.dev — Termos de Uso",
+    termsSeoTitle: "Termos de Uso | Bandiit.dev",
     termsSeoDescription:
       "Confira as condições de uso do site e dos materiais da Bandiit.dev.",
-    supportSeoTitle: "Bandiit.dev — Suporte",
+    supportSeoTitle: "Suporte | Bandiit.dev",
     supportSeoDescription:
       "Fale com o time da Bandiit.dev por e-mail ou WhatsApp para suporte.",
     privacyTitle: "Política de Privacidade",
     privacyIntro:
-      "A Bandiit.dev respeita a sua privacidade. Coletamos apenas os dados necessários para responder contatos e prestar nossos serviços, como nome, e-mail e mensagem enviados pelos formulários do site.",
+      "A Bandiit.dev respeita a sua privacidade. Coletamos apenas os dados necessários para responder contatos e prestar nossos serviços.",
     privacyUseTitle: "Como usamos os dados",
     privacyUseItems: [
       "Responder solicitações e propostas",
-      "Comunicar sobre o andamento de projetos/atendimentos",
+      "Comunicar sobre o andamento de projetos e atendimentos",
       "Cumprir obrigações legais quando aplicável",
     ],
     privacyShareTitle: "Compartilhamento",
     privacyShareText:
-      "Não vendemos seus dados. Podemos compartilhar informações apenas com fornecedores essenciais (ex.: hospedagem/e-mail) e sempre para viabilizar o serviço.",
+      "Não vendemos seus dados. Compartilhamos informações apenas com fornecedores essenciais quando necessário para viabilizar o serviço.",
     privacyRightsTitle: "Seus direitos",
     privacyRightsText:
       "Você pode solicitar acesso, correção ou exclusão de dados pessoais a qualquer momento pelo e-mail contato@bandiit.dev.br.",
@@ -183,16 +225,16 @@ const translationContent = {
     termsIntro:
       "Ao acessar este site, você concorda em utilizá-lo de forma lícita e responsável.",
     termsOwnershipText:
-      "O conteúdo do site (textos, marca e materiais) é de propriedade da Bandiit.dev, salvo indicação em contrário. É proibida a reprodução sem autorização.",
+      "O conteúdo do site (textos, marca e materiais) é de propriedade da Bandiit.dev, salvo indicação em contrário.",
     termsLinksText:
-      "O site pode conter links para sites de terceiros; não nos responsabilizamos por conteúdos ou políticas desses terceiros.",
+      "O site pode conter links para terceiros; não nos responsabilizamos por conteúdos ou políticas desses sites.",
     termsUpdateText:
-      "Podemos atualizar estes termos a qualquer momento. Última atualização: 19/02/2026.",
+      "Podemos atualizar estes termos a qualquer momento. Última atualização: 22/05/2026.",
     supportTitle: "Suporte",
     supportIntro: "Para suporte, dúvidas ou solicitações, entre em contato:",
     supportEmailLabel: "E-mail",
     supportNote: "Respondemos em até um dia útil.",
-    footerAddressLabel: "Endereço",
+    footerAddressLabel: "Atendimento",
     footerContactLabel: "Contato",
     footerPrivacyLabel: "Privacidade",
     footerLinksLabel: "Links úteis",
