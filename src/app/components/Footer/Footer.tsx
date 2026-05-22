@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { COMPANY_INFO } from "../../constants/company";
-import { useLanguage, useTranslation } from "../../i18n";
+import { getLocalizedLegalPaths, useLanguage, useTranslation } from "../../i18n";
 
 import "./style.css";
 
@@ -20,11 +20,12 @@ const Footer = () => {
     language === "pt-BR" ? COMPANY_INFO.emailPt : COMPANY_INFO.emailEn;
   const plainPhone = COMPANY_INFO.phone.replace(/[^\d]/g, "");
   const whatsappHref = plainPhone ? `https://wa.me/${plainPhone}` : undefined;
+  const legalPaths = getLocalizedLegalPaths(language);
 
   const links = [
-    { to: "/privacy", label: t("navPrivacy") },
-    { to: "/terms", label: t("navTerms") },
-    { to: "/support", label: t("navSupport") },
+    { to: legalPaths.privacy, label: t("navPrivacy") },
+    { to: legalPaths.terms, label: t("navTerms") },
+    { to: legalPaths.support, label: t("navSupport") },
   ];
 
   return (

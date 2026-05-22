@@ -1,6 +1,6 @@
-import { ChangeEvent } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
-import { Language, useLanguage, useTranslation } from "../../i18n";
+import { Language, localizePath, useLanguage, useTranslation } from "../../i18n";
 
 import "./style.css";
 
@@ -12,9 +12,13 @@ const options: Array<{ code: Language; label: string }> = [
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
   const t = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleClick = (nextLanguage: Language) => () => {
     setLanguage(nextLanguage);
+    const nextPath = localizePath(location.pathname, nextLanguage);
+    navigate(`${nextPath}${location.hash}`);
   };
 
   return (

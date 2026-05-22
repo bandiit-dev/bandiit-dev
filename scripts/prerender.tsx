@@ -11,7 +11,16 @@ const { HelmetProvider } = helmetAsync;
 
 const DIST_DIR = join(process.cwd(), "dist");
 const TEMPLATE_PATH = join(DIST_DIR, "index.html");
-const routes = ["/", "/privacy", "/terms", "/support"];
+const routes = [
+  "/",
+  "/privacidade",
+  "/termos",
+  "/suporte",
+  "/en",
+  "/en/privacy",
+  "/en/terms",
+  "/en/support",
+];
 
 const template = readFileSync(TEMPLATE_PATH, "utf8");
 

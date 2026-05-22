@@ -12,7 +12,8 @@ const SupportView = () => {
   const t = useTranslation();
   const { language } = useLanguage();
   const contactEmail = language === "pt-BR" ? COMPANY_INFO.emailPt : COMPANY_INFO.emailEn;
-  const canonicalUrl = `${BASE_URL}/support`;
+  const canonicalPath = language === "en-US" ? "/en/support" : "/suporte";
+  const canonicalUrl = `${BASE_URL}${canonicalPath}`;
   const title = t("supportSeoTitle");
   const description = t("supportSeoDescription");
 

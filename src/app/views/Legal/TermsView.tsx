@@ -11,7 +11,8 @@ const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
 const TermsView = () => {
   const t = useTranslation();
   const { language } = useLanguage();
-  const canonicalUrl = `${BASE_URL}/terms`;
+  const canonicalPath = language === "en-US" ? "/en/terms" : "/termos";
+  const canonicalUrl = `${BASE_URL}${canonicalPath}`;
   const title = t("termsSeoTitle");
   const description = t("termsSeoDescription");
 

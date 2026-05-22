@@ -52,7 +52,8 @@ const HomeView = () => {
   const heroPrimaryHref = t("homeHeroPrimaryHref");
   const heroSecondaryHref = t("homeHeroSecondaryHref");
 
-  const canonicalUrl = `${BASE_URL}/`;
+  const canonicalPath = language === "en-US" ? "/en" : "/";
+  const canonicalUrl = `${BASE_URL}${canonicalPath}`;
   const jsonLd = useMemo(
     () => ({
       "@context": "https://schema.org",
@@ -119,7 +120,7 @@ const HomeView = () => {
         <meta name="description" content={t("homeSeoDescription")} />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="pt-BR" href={`${BASE_URL}/`} />
-        <link rel="alternate" hrefLang="en-US" href={`${BASE_URL}/?lang=en-US`} />
+        <link rel="alternate" hrefLang="en-US" href={`${BASE_URL}/en`} />
         <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/`} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content={language} />

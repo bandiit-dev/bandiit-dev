@@ -12,7 +12,8 @@ const PrivacyView = () => {
   const t = useTranslation();
   const { language } = useLanguage();
   const useItems = t("privacyUseItems");
-  const canonicalUrl = `${BASE_URL}/privacy`;
+  const canonicalPath = language === "en-US" ? "/en/privacy" : "/privacidade";
+  const canonicalUrl = `${BASE_URL}${canonicalPath}`;
   const title = t("privacySeoTitle");
   const description = t("privacySeoDescription");
 
