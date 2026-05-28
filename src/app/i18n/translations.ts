@@ -93,8 +93,9 @@ const translationContent = {
     contactFormEmailRequired: "Please enter your email.",
     contactFormEmailInvalid: "Please enter a valid email.",
     contactFormWebsiteInvalid: "Please enter a valid website URL.",
-    contactFormMessageRequired: "Please enter your message.",
-    contactFormMessageMin: "Message must be at least 10 characters.",
+    contactFormMessageRequired: "Please tell us what your company needs.",
+    contactFormMessageMin:
+      "What your company needs must be at least 10 characters.",
     homeSeoTitle:
       "Website and Business System Development for Companies | Bandiit.dev",
     homeSeoDescription:
@@ -239,9 +240,9 @@ const translationContent = {
     contactFormEmailRequired: "Informe seu e-mail.",
     contactFormEmailInvalid: "Informe um e-mail válido.",
     contactFormWebsiteInvalid: "Informe um URL válido para o site.",
-    contactFormMessageRequired: "Informe o motivo da necessidade.",
+    contactFormMessageRequired: "Informe o motivo do contato.",
     contactFormMessageMin:
-      "O motivo da necessidade deve ter pelo menos 10 caracteres.",
+      "O motivo do contato deve ter pelo menos 10 caracteres.",
     homeSeoTitle: "Criação de Sites para Empresas | Bandiit.dev",
     homeSeoDescription:
       "Criamos sites profissionais, sistemas sob medida, integrações e automações para pequenas e médias empresas no Brasil. Fale com a Bandiit.dev.",

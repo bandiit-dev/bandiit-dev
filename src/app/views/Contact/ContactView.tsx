@@ -199,12 +199,16 @@ const ContactView = () => {
         </div>
 
         {feedback === "success" ? (
-          <p className="contact-form__feedback contact-form__feedback--success">
+          <p
+            className="contact-form__feedback contact-form__feedback--success"
+            role="status"
+            aria-live="polite"
+          >
             {t("contactFormSuccess")}
           </p>
         ) : null}
         {feedback === "error" ? (
-          <p className="contact-form__feedback contact-form__feedback--error">
+          <p className="contact-form__feedback contact-form__feedback--error" role="alert">
             {t("contactFormError")}
           </p>
         ) : null}
