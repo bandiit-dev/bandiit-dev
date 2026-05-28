@@ -1,9 +1,9 @@
 import { useEffect, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { COMPANY_INFO } from "../../constants/company";
-import { useLanguage, useTranslation } from "../../i18n";
+import { getLocalizedContactPath, useLanguage, useTranslation } from "../../i18n";
 
 import "./style.css";
 
@@ -51,6 +51,7 @@ const HomeView = () => {
   const whoForBullets = t("homeHowBullets");
   const heroPrimaryHref = t("homeHeroPrimaryHref");
   const heroSecondaryHref = t("homeHeroSecondaryHref");
+  const contactPath = getLocalizedContactPath(language);
 
   const canonicalPath = language === "en-US" ? "/en" : "/";
   const canonicalUrl = `${BASE_URL}${canonicalPath}`;
@@ -141,9 +142,9 @@ const HomeView = () => {
           <h1 id="home-hero-title">{t("homeHeroSubtitle")}</h1>
           <p className="home-hero__description">{t("homeHeroDescription")}</p>
           <div className="home-hero__actions">
-            <a className="btn btn-primary" href={heroPrimaryHref}>
+            <Link className="btn btn-primary" to={heroPrimaryHref}>
               {t("homeHeroPrimaryCta")}
-            </a>
+            </Link>
             <a className="btn btn-secondary" href={heroSecondaryHref} target="_blank" rel="noreferrer">
               {t("homeHeroSecondaryCta")}
             </a>
@@ -224,9 +225,9 @@ const HomeView = () => {
             <h2 id="home-contact-title">{t("homeContactTitle")}</h2>
             <p className="home-section__lead">{t("homeContactIntro")}</p>
           </div>
-          <a className="btn btn-primary" href={heroPrimaryHref}>
+          <Link className="btn btn-primary" to={contactPath}>
             {t("homeContactCta")}
-          </a>
+          </Link>
         </div>
       </section>
     </div>

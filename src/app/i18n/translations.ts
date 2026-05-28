@@ -17,7 +17,7 @@ const translationContent = {
     homeHeroDescription:
       "We build professional websites, custom web systems, integrations, and automations for companies that want to improve digital presence, reduce manual processes, and grow efficiently.",
     homeHeroPrimaryCta: "Request a quote",
-    homeHeroPrimaryHref: "mailto:contato@bandiit.dev.br",
+    homeHeroPrimaryHref: "/en/get-in-touch",
     homeHeroSecondaryCta: "Talk to a specialist",
     homeHeroSecondaryHref: "https://wa.me/5521971340128",
     homeServicesTitle: "What we do",
@@ -69,6 +69,32 @@ const translationContent = {
     homeContactHoursLabel: "Hours",
     homeContactHoursValue: "Mon-Fri, 9am-6pm (BRT)",
     homeContactCta: "Request a quote",
+    contactSeoTitle: "Get in touch | Bandiit.dev",
+    contactSeoDescription:
+      "Tell us what you need and we will respond with the best path for your project.",
+    contactFormTitle: "Let's talk?",
+    contactFormDescription:
+      "Tell us a bit about what you need and we'll get back to you soon.",
+    contactFormNameLabel: "Name",
+    contactFormEmailLabel: "Email",
+    contactFormCompanyLabel: "Company",
+    contactFormWebsiteLabel: "Website",
+    contactFormMessageLabel: "Tell Us what your company needs",
+    contactFormMessagePlaceholder:
+      "Tell us what you need, your goals, or the problem you want to solve.",
+    contactFormSubmit: "Send message",
+    contactFormSubmitting: "Sending...",
+    contactFormSuccess:
+      "Message sent successfully. We'll get back to you soon.",
+    contactFormError:
+      "We couldn't send your message. Please try again shortly.",
+    contactFormNameRequired: "Please enter your name.",
+    contactFormNameMin: "Name must be at least 2 characters.",
+    contactFormEmailRequired: "Please enter your email.",
+    contactFormEmailInvalid: "Please enter a valid email.",
+    contactFormWebsiteInvalid: "Please enter a valid website URL.",
+    contactFormMessageRequired: "Please enter your message.",
+    contactFormMessageMin: "Message must be at least 10 characters.",
     homeSeoTitle:
       "Website and Business System Development for Companies | Bandiit.dev",
     homeSeoDescription:
@@ -137,7 +163,7 @@ const translationContent = {
     homeHeroDescription:
       "Desenvolvemos sites profissionais, sistemas web, integrações e automações para empresas que querem melhorar sua presença digital, reduzir processos manuais e crescer com mais eficiência.",
     homeHeroPrimaryCta: "Solicitar orçamento",
-    homeHeroPrimaryHref: "mailto:contato@bandiit.dev.br",
+    homeHeroPrimaryHref: "/contato",
     homeHeroSecondaryCta: "Falar com especialista",
     homeHeroSecondaryHref: "https://wa.me/5521971340128",
     homeServicesTitle: "O que fazemos",
@@ -189,6 +215,33 @@ const translationContent = {
     homeContactHoursLabel: "Horário",
     homeContactHoursValue: "Seg-Sex, 9h-18h (BRT)",
     homeContactCta: "Solicitar orçamento",
+    contactSeoTitle: "Contato | Bandiit.dev",
+    contactSeoDescription:
+      "Conte o que você precisa e responderemos com o melhor caminho para o seu projeto.",
+    contactFormTitle: "Vamos conversar?",
+    contactFormDescription:
+      "Conte um pouco sobre o que você precisa e retornaremos em breve.",
+    contactFormNameLabel: "Nome",
+    contactFormEmailLabel: "E-mail",
+    contactFormCompanyLabel: "Empresa",
+    contactFormWebsiteLabel: "Site",
+    contactFormMessageLabel: "Motivo do Contato",
+    contactFormMessagePlaceholder:
+      "Conte o que você precisa, seus objetivos ou o problema que deseja resolver.",
+    contactFormSubmit: "Enviar mensagem",
+    contactFormSubmitting: "Enviando...",
+    contactFormSuccess:
+      "Mensagem enviada com sucesso. Em breve entraremos em contato.",
+    contactFormError:
+      "Não foi possível enviar sua mensagem. Tente novamente em instantes.",
+    contactFormNameRequired: "Informe seu nome.",
+    contactFormNameMin: "O nome deve ter pelo menos 2 caracteres.",
+    contactFormEmailRequired: "Informe seu e-mail.",
+    contactFormEmailInvalid: "Informe um e-mail válido.",
+    contactFormWebsiteInvalid: "Informe um URL válido para o site.",
+    contactFormMessageRequired: "Informe o motivo da necessidade.",
+    contactFormMessageMin:
+      "O motivo da necessidade deve ter pelo menos 10 caracteres.",
     homeSeoTitle: "Criação de Sites para Empresas | Bandiit.dev",
     homeSeoDescription:
       "Criamos sites profissionais, sistemas sob medida, integrações e automações para pequenas e médias empresas no Brasil. Fale com a Bandiit.dev.",

@@ -6,6 +6,7 @@ import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import { AnalyticsTracker } from "../analytics";
 import { COMPANY_INFO } from "../constants/company";
 import {
+  getLocalizedContactPath,
   detectLanguageFromPath,
   getLocalizedHomePath,
   useLanguage,
@@ -27,11 +28,13 @@ const AppLayout = () => {
   }, [language, location.pathname, setLanguage]);
 
   const homePath = getLocalizedHomePath(language);
+  const contactPath = getLocalizedContactPath(language);
 
   const anchorLinks = [
     { to: `${homePath}#sobre`, label: t("navAbout") },
     { to: `${homePath}#servicos`, label: t("navServices") },
     { to: `${homePath}#como-trabalhamos`, label: t("navHow") },
+    { to: contactPath, label: t("navContact") },
   ];
 
   return (

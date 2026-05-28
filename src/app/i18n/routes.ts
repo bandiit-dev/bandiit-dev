@@ -7,9 +7,11 @@ const PT_TO_EN_PATHS: Record<string, string> = {
   "/privacidade": "/en/privacy",
   "/termos": "/en/terms",
   "/suporte": "/en/support",
+  "/contato": "/en/get-in-touch",
   "/privacy": "/en/privacy",
   "/terms": "/en/terms",
   "/support": "/en/support",
+  "/get-in-touch": "/en/get-in-touch",
 };
 
 const EN_TO_PT_PATHS: Record<string, string> = {
@@ -17,6 +19,7 @@ const EN_TO_PT_PATHS: Record<string, string> = {
   "/en/privacy": "/privacidade",
   "/en/terms": "/termos",
   "/en/support": "/suporte",
+  "/en/get-in-touch": "/contato",
 };
 
 const normalizePath = (pathname: string) => {
@@ -62,3 +65,6 @@ export const getLocalizedLegalPaths = (language: Language) => {
 
 export const getLocalizedHomePath = (language: Language) =>
   language === "en-US" ? "/en" : "/";
+
+export const getLocalizedContactPath = (language: Language) =>
+  language === "en-US" ? "/en/get-in-touch" : "/contato";
